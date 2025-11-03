@@ -148,16 +148,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative group"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-            <h1 className="text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 relative">
+            <h1 className="text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 relative inline-block">
               dharshan bellan
               <SparklesIcon className="h-8 w-8 text-yellow-400 absolute -top-4 -right-4 animate-pulse" />
             </h1>
           </motion.div>
           <p className="text-xl text-gray-300 mb-8 font-light tracking-wide">
-            ai fullstack software engineer, hackathon winner, curr swe @ motive
+            ai fullstack software engineer, hackathon winner, curr founding eng @ giggles
           </p>
           <div className="flex gap-4 justify-center">
             <motion.button
@@ -649,9 +647,23 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-              resume
-            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                resume
+              </h2>
+              <motion.a
+                href="/resume.pdf"
+                download="Dharshan_Bellan_Resume.pdf"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-gray-400 hover:text-white transition-colors flex items-center mt-2"
+                title="Download Resume"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </motion.a>
+            </div>
           </motion.div>
 
           {/* Header Info */}
@@ -665,7 +677,7 @@ export default function Home() {
               Dharshan Bellan
             </h1>
             <p className="text-gray-300">
-              SF/Bay Area | dbellan1291@gmail.com | linkedIn.com/in/dharshanbellann | github.com/virocodes | dharshan.dev
+              SF/Bay Area | dbellan1291@gmail.com | linkedIn.com/in/dharshanbellan | github.com/virocodes | dharshan.dev
             </p>
           </motion.div>
 
@@ -680,13 +692,30 @@ export default function Home() {
               Experience
             </h2>
             
-            {/* Motive */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            {/* Giggles */}
+            <div className="mb-12">
+              <div>
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-white">Software Engineer, QA</h3>
-                  <span className="text-gray-400">Mar 2025 - Present</span>
+                  <h3 className="text-xl font-semibold text-white">Founding Engineer</h3>
+                  <span className="text-gray-400">Jul 2025 - Present</span>
+                </div>
+                <p className="text-gray-400 mb-3">Giggles Platforms Inc. • San Francisco, CA</p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>First engineering hire; architected entire social media backend from scratch, scaling to 20k DAU and 75k+ users</li>
+                  <li>Cut Firebase read costs by ~80%, and migrated full backend to Supabase with custom migration scripts</li>
+                  <li>Built AI-driven vector based recommendation engine using Vertex AI + Pinecone, powering personalized video feeds</li>
+                  <li>Engineered Node.js + Fastify + Redis microservices with async media pipelines, HLS conversion, and AI analysis</li>
+                  <li>Deployed distributed infra on Railway, optimized for speed, cost, and scalability under load</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Motive */}
+            <div className="mb-12">
+              <div>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-xl font-semibold text-white">Software Engineer</h3>
+                  <span className="text-gray-400">Mar 2025 - Jul 2025</span>
                 </div>
                 <p className="text-gray-400 mb-3">Motive • San Francisco, CA</p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -699,27 +728,25 @@ export default function Home() {
             </div>
 
             {/* Headstarter */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div className="mb-12">
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">Software Engineering Resident</h3>
-                  <span className="text-gray-400">Jul 2024 - Present</span>
+                  <span className="text-gray-400">Jul 2024 - Jun 2025</span>
                 </div>
                 <p className="text-gray-400 mb-3">Headstarter • San Francisco, CA</p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Building 14+ machine learning, ai-engineering, and full-stack projects in fast-paced software team environments</li>
-                  <li>Developing neural networks in Python, and 11 apps in Typescript on AWS/Vercel with dev and production environments</li>
-                  <li>Implementing agentic AI, llm-chaining, etc, on 10+ LLM models</li>
+                  <li>Built 14+ machine learning, ai-engineering, and full-stack projects in fast-paced software team environments</li>
+                  <li>Developed neural networks in Python, and 11 apps in Typescript on AWS/Vercel with dev and production environments</li>
+                  <li>Implemented agentic AI, llm-chaining, etc, on 10+ LLM models</li>
                   <li>Coached by Google Machine Learning, Google Kubernetes, Two Sigma, Tesla, Figma, and Citadel Engineers</li>
                 </ul>
               </div>
             </div>
 
             {/* MandrakeTech */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div className="mb-12">
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">Software Engineering Intern</h3>
                   <span className="text-gray-400">Jun 2024 - Aug 2024</span>
@@ -734,9 +761,8 @@ export default function Home() {
             </div>
 
             {/* S#AI */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div>
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">Machine Learning Intern</h3>
                   <span className="text-gray-400">Nov 2023 - May 2024</span>
@@ -748,24 +774,9 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-
-            {/* Endgrate */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-white">Software Engineering Intern</h3>
-                  <span className="text-gray-400">Mar 2024 - May 2024</span>
-                </div>
-                <p className="text-gray-400 mb-3">Endgrate • Remote</p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Developed a Flask-based API integration tool to automate data transfer between Asana and Todoist</li>
-                </ul>
-              </div>
-            </div>
           </motion.div>
 
-          {/* Projects */}
+          {/* Hackathon Wins */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -773,13 +784,12 @@ export default function Home() {
             className="mb-20"
           >
             <h2 className="text-2xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-              Projects
+              Hackathon Wins
             </h2>
 
             {/* Storybook */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div>
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">storybook</h3>
                   <span className="text-gray-400">Oct 2024</span>
@@ -792,11 +802,22 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+          </motion.div>
+
+          {/* AI Projects */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-20"
+          >
+            <h2 className="text-2xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+              AI Projects
+            </h2>
 
             {/* TikTok Clone */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div className="mb-12">
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">TikTok Clone</h3>
                   <span className="text-gray-400">Dec 2024</span>
@@ -811,9 +832,8 @@ export default function Home() {
             </div>
 
             {/* VZN */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div className="mb-12">
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">vzn</h3>
                   <span className="text-gray-400">Aug 2024</span>
@@ -828,9 +848,8 @@ export default function Home() {
             </div>
 
             {/* ReviewPal */}
-            <div className="mb-12 relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div className="mb-12">
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">ReviewPal</h3>
                   <span className="text-gray-400">Dec 2024</span>
@@ -844,9 +863,8 @@ export default function Home() {
             </div>
 
             {/* Aptrak */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-              <div className="relative">
+            <div>
+              <div>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">aptrak</h3>
                   <span className="text-gray-400">Jun 2024 - Aug 2024</span>
@@ -874,16 +892,14 @@ export default function Home() {
                 Skills
               </h2>
               <div className="space-y-6">
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-                  <div className="relative">
+                <div>
+                  <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Languages/Frameworks</h3>
                     <p className="text-gray-300">Python (4yrs) · JavaScript (3yrs) · React (2yrs) · Next.js (1yr) · Node.js (1yr) · Flask (1yr)</p>
                   </div>
                 </div>
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-                  <div className="relative">
+                <div>
+                  <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Software</h3>
                     <p className="text-gray-300">Firebase · Vercel · Heroku · JupyterNotebook · Google Colab · Git · Bash</p>
                   </div>
@@ -896,9 +912,8 @@ export default function Home() {
               <h2 className="text-2xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
                 Education
               </h2>
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000 group-hover:duration-200" />
-                <div className="relative">
+              <div>
+                <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Diablo Valley College</h3>
                   <p className="text-gray-400 mb-2">Expected Graduation: May 2026</p>
                   <p className="text-gray-300">Associate of Science in Computer Science | 4.0 GPA</p>
